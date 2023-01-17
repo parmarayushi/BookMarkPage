@@ -1,0 +1,22 @@
+.icon-error {
+    @include position (absolute, 20px, 15px, auto, auto)
+}
+
+
+.icon {
+    color: white;
+
+    &:hover {
+        color: $danger;
+    }
+}
+
+.invalid {
+    border: 2px solid $danger;
+}
+
+.footer-nav {
+    @media(max-width:768px) {
+        line-height: 50px;
+    }
+}

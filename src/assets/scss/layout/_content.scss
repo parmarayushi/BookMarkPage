@@ -1,0 +1,67 @@
+.people-joined {
+    letter-spacing: 10px;
+}
+
+// .img-bg {
+//     background-color: $primary;
+//     height: 300px;
+//     border-radius: 200px 0 0 200px;
+//     @include position (absolute, auto, 0, -30px, 60%);
+//     z-index: -1;
+// }
+
+.nav-item {
+    .nav-link {
+        &:hover {
+            color: $danger;
+        }
+    }
+}
+
+.accordion-button {
+    &:focus {
+        border-color: none;
+        box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+        color: black;
+        background-color: white;
+    }
+
+    &::after {
+        content: '';
+        color: $danger;
+    }
+}
+
+.tabs-container {
+
+    .tabs-list {
+        cursor: pointer;
+        color: $info;
+        border-bottom: 0.5px solid $info;
+
+        &:hover {
+            color: $danger;
+        }
+
+        &.activetab {
+            color: black;
+            border-bottom: 3px solid $danger;
+            // transition: 0.4s all;
+        }
+
+        &.activetab::before {
+            width: 100%;
+        }
+    }
+}
+
+.w-md-50 {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}

@@ -1,0 +1,57 @@
+<footer>
+    <div class="bg-primary text-center text-white p-4 p-md-5 pt-5">
+        <div class="d-flex flex-column align-items-center py-3 pt-5 py-md-5">
+            <div>
+                <p class="people-joined pb-md-4">35,000+ ALREADY JOINED</p>
+                <h1 class="pb-4 pb-md-5">Stay up-to-date with what we're doing</h1>
+            </div>
+            <form [formGroup]="form">
+                <div class="d-md-flex">
+                    <div class="rounded-1 me-md-4 position-relative">
+                        <input type="text" class="form-control p-3 pe-5" placeholder="Enter your email address"
+                            formControlName="email"
+                            [ngClass]="getControls['email'].invalid && getControls['email'].touched || formSubmitted ? 'invalid' : 'border-none'">
+                        <img src="assets/images/icon-error.svg" alt="error" class="icon-error"
+                            [ngClass]="getControls['email'].invalid && getControls['email'].touched || formSubmitted ? 'd-block' : 'd-none'">
+                        <div *ngIf="getControls['email'].touched && getControls['email'].errors || formSubmitted"
+                            class="d-flex">
+                            <small *ngIf="getControls['email'].errors && getControls['email'].errors['required']"
+                                class="text-white text-start bg-danger rounded-bottom w-100 p-1">
+                                email is required.
+                            </small>
+                            <small *ngIf="getControls['email'].errors?.['pattern']"
+                                class="text-white text-start bg-danger fst-italic rounded-bottom w-100 p-1">
+                                Whoops, make sure it's an email
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pt-3 pt-md-0">
+                        <button type="submit" class="btn btn-danger btn-danger-hover btn-contactus text-nowrap p-3 px-4"
+                            (click)="onSubmit()">Contact Us</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer-nav bg-secondary text-center text-md-start p-4">
+        <nav class="container d-md-flex justify-content-between align-items-center">
+            <ul class="d-md-flex ps-0 mb-0">
+                <img src="assets/images/footer-logo.svg" alt="footer-logo" class="pe-md-5">
+                <li class="nav-item text-white cursor-pointer pt-3 pt-md-0  pe-md-5">
+                    <small class="nav-link">FEATURES</small>
+                </li>
+                <li class="nav-item text-white cursor-pointer pe-md-5">
+                    <small class="nav-link">PRICING</small>
+                </li>
+                <li class="nav-item text-white cursor-pointer">
+                    <small class="nav-link">CONTACT</small>
+                </li>
+            </ul>
+            <div class="pt-3 pt-md-0">
+                <span class="icon icon-facebook cursor-pointer fs-4 pe-4"></span>
+                <span class="icon icon-twitter cursor-pointer fs-4"></span>
+            </div>
+        </nav>
+    </div>
+
+</footer>
