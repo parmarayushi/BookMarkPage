@@ -10,6 +10,10 @@ export class BookmrkPresenterService {
   constructor(private _fb: FormBuilder) {
   }
 
+  /**
+   * @name buildForm
+   * @returns formGroup
+   */
   public buildForm() {
     return this._fb.group({
       email: ["", [Validators.required, Validators.pattern(EMAIL_PATTERN)]]

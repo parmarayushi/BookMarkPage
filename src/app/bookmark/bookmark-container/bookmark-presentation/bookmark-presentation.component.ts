@@ -20,6 +20,11 @@ export class BookmarkPresentationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @name onTabClick
+   * @param tab 
+   * @description switch the tab on click.
+   */
   public onTabClick(tab: string) {
     this.activeTab = tab;
     this.currentPage = 0;
